@@ -1,7 +1,7 @@
 using UnityEngine;
 
-    #ROOTNAMESPACEBEGIN#
-[CreateAssetMenu(fileName =, menuName =)]
+#ROOTNAMESPACEBEGIN#
+[CreateAssetMenu(fileName = , menuName = , order = 1)]
 public class #SCRIPTNAME# : ScriptableObject
 {
     private static #SCRIPTNAME# instance;
@@ -12,13 +12,13 @@ public class #SCRIPTNAME# : ScriptableObject
         {
             if (instance == null)
             {
-                instance = Resources.Load<#SCRIPTNAME#>();
+                instance = Resources.Load<#SCRIPTNAME#>("#SCRIPTNAME#");
 
                 if (instance == null)
                 {
                     instance = CreateInstance<#SCRIPTNAME#>();
 #if UNITY_EDITOR
-                    UnityEditor.AssetDatabase.CreateAsset(instance,);
+                    UnityEditor.AssetDatabase.CreateAsset(instance, "Assets/Resources/#SCRIPTNAME#.asset");
                     UnityEditor.AssetDatabase.SaveAssets();
 #endif
                 }
