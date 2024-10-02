@@ -1,0 +1,19 @@
+using UnityEngine;
+
+    #ROOTNAMESPACEBEGIN#
+public class GameManager : MonoBehaviour 
+{
+    private static GameManager instance;
+	
+    public GameManager Instance
+    {
+    	get
+        {
+        	if (instance == null)
+	            instance = this;
+	    	
+	        return instance;
+        }
+    }
+}
+#ROOTNAMESPACEEND#

@@ -1,0 +1,21 @@
+using UnityEngine;
+using UnityEditor;
+
+    #ROOTNAMESPACEBEGIN#
+[CustomEditor(typeof())]
+public class #SCRIPTNAME# : Editor
+{
+    private void OnEnable()
+    {
+        #NOTRIM#
+    }
+    private void OnDisable()
+    {
+        #NOTRIM#
+    }
+    public override void OnInspectorGUI()
+    {
+        #NOTRIM#
+    }
+}
+#ROOTNAMESPACEEND#

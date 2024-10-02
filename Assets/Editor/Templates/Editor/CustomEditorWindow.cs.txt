@@ -1,0 +1,28 @@
+using UnityEngine;
+using UnityEditor;
+
+    #ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : EditorWindow
+{
+    [MenuItem()]
+    public static void ShowWindow()
+    {
+        GetWindow<#SCRIPTNAME#>();
+    }
+
+    private void OnEnable()
+    {
+       
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+
+    private void OnGUI()
+    {
+       	
+    }
+}
+#ROOTNAMESPACEEND#

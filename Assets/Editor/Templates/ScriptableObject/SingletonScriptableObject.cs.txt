@@ -1,0 +1,30 @@
+using UnityEngine;
+
+    #ROOTNAMESPACEBEGIN#
+[CreateAssetMenu(fileName =, menuName =)]
+public class #SCRIPTNAME# : ScriptableObject
+{
+    private static #SCRIPTNAME# instance;
+
+    public static #SCRIPTNAME# Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = Resources.Load<#SCRIPTNAME#>();
+
+                if (instance == null)
+                {
+                    instance = CreateInstance<#SCRIPTNAME#>();
+#if UNITY_EDITOR
+                    UnityEditor.AssetDatabase.CreateAsset(instance,);
+                    UnityEditor.AssetDatabase.SaveAssets();
+#endif
+                }
+            }
+            return instance;
+        }
+    }
+}
+#ROOTNAMESPACEEND#
